@@ -1,16 +1,12 @@
 package com.example.productos;
-
 import com.example.productos.model.Producto;
 import com.example.productos.repository.ProductoRepository;
 import com.example.productos.service.ProductoService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-
 import reactor.core.publisher.Flux;
-
 import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -104,6 +100,5 @@ class ProductoServiceTests {
 
         assertEquals(producto1, producto.block());
         verify(productoRepository, times(1)).save(producto1);
-    }
-    
+    } 
 }
